@@ -16,7 +16,10 @@ public class TreeCrook extends JavaPlugin implements Listener {
 	
 	@EventHandler
 	public void onBlockBreak(BlockBreakEvent e) {
-		if(e.getPlayer().getItemInHand().getType().equals(Material.WOOD_HOE) && (e.getBlock().getType().equals(Material.LEAVES) || e.getBlock().getType().equals(Material.LEAVES_2))) {
+		Material hoeType = e.getPlayer().getItemInHand().getType();
+		if(hoeType.equals(Material.DIAMOND_HOE) || hoeType.equals(Material.GOLD_HOE) || hoeType.equals(Material.IRON_HOE) || hoeType.equals(Material.STONE_HOE) || hoeType.equals(Material.WOOD_HOE)
+				&& (e.getBlock().getType().equals(Material.LEAVES) || e.getBlock().getType().equals(Material.LEAVES_2))) {
+			
 			int baseX = e.getBlock().getX(), baseY = e.getBlock().getY(), baseZ = e.getBlock().getZ();
 			for (int x = baseX - 1; x <= baseX + 1; x++) {
 				for (int y = baseY - 1; y <= baseY + 1; y++) {
