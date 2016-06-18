@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.externalToolBuilders/New_Builder.launch
+.classpath
+.settings/org.eclipse.jdt.core.prefs
